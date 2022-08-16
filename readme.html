@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+ <html lang="cs">
+<head>
+<title> CS:GO - SKINS </title>
+<meta charset='utf-8'></meta>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
 
+<div id='id_nadpis'> <h2> CS:GO - SKINS DATABASE </h2></div>
+
+<div id='id_menu'> 
+<div class='menu-nadpis'> CS:GO SKINS </div> 
+<a href="csgo_skins.php"> <h3>SKINS</h3> </a>
+<a href="csgo_1.html"> <h3>CREATE SKINS</h3> </a>
+<a href="csgo_players.php"> <h3>PLAYERS</h3> </a>
+<a href="readme.html"> <h3>ABOUT</h3> </a>
+</div>
+
+<div id='id_obsah'> <h3> O projektu </h3>
+<p> Tato databáze byla vytvořena k projektu do předmětu VDC.</p>
+<p>Na obrázku ER digramu níže lze vidět všechny tabulky a jejich atributy. Schéma se skládá celkem z 5 tabulek. 
+    Tři hlavní tabulky nesou názvy players, weapons a skins. Další dvě pomocné tabulky vznikly uskutečněním M:N vazby mezi tabulky
+    players a weapons a mezi weapons a skins.</p>
+<img src="erd.png" alt="ER diagram" class="center">
+<p>Na stránce SKINS je možno vidět přehled všech skinů, které jsou k dispozici a nachází se v tabulce skins. 
+    Skiny nesou informaci o názvu, ceně a kvalitě. Pod přehledem všech skinů se nachází formulář pro vkládání dat, který přiřazuje zbraně a jejich skiny jednotlivým hráčům.</p>
+<p>Na stránce CREATE SKINS se nachází tabulka s návrhy na nové názvy skinů. Uživatel může pomocí inputů vložit vlastní návrh do tabulky.
+    Jde o splnění volitelného úkolu: úprava dat input v tabulce s AJAXem, bez reloadu stránky</p>
+<p> Na stránce PLAYERS se nachází tabulka hráčů, která obsahuje jejich nickname a email.
+    Níže je možno nalézt tabulku s již přiřazenými zbraněmi k jednotlivým hráčům.
+    A pod touto tabulkou jsou dále přiřazeny skiny ke zbraním.</p>
+<p> Odkaz k zobrazení <a href="erd.png"> ER diagramu </a>  se nachází zde.</p>
+<p> Odkaz ke stažení <a href="init.sql"> skriptu </a> pro vytvoření tabulek s výchozími hodnotami.</p>
+</div>
+
+<div id='id_zahlavi'> <h3>© 193241 - Pospíšil Václav</h3></div>
+
+</body>
+</html>
