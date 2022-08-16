@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+ <html lang="cs">
+<head>
+<title> CS:GO - SKINS </title>
+<meta charset='utf-8'></meta>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+
+<div id='id_nadpis'> <h2> CS:GO - SKINS DATABASE </h2></div>
+
+<div id='id_menu'> 
+<div class='menu-nadpis'> CS:GO SKINS </div> 
+<a href="csgo_skins.php"> <h3>SKINS</h3> </a>
+<a href="csgo_1.html"> <h3>CREATE SKINS</h3> </a>
+<a href="csgo_players.php"> <h3>PLAYERS</h3> </a>
+<a href="readme.html"> <h3>ABOUT</h3> </a>
+</div>
+
+<div id='id_obsah'> <h3> CREATE SKINS </h3>
+
+<script>
+  function fce1() {
+    var t1 = document.getElementById("ed1").value;
+    var t2 = document.getElementById("ed2").value;
+    if(!t1 || !t2) {
+  	alert("Vyplňte prosím obě pole!");
+  	return;
+  	}
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td>"+t1+"</td><td>"+t2+"</td>";
+    document.getElementById("table1").appendChild(tr);
+  }
+
+  function fce2() {
+  	var rowCount = table1.rows.length;
+  	if(rowCount > 1) {
+  		document.getElementById("table1").deleteRow(-1);
+  	} else {
+  	alert("V tabulce nejsou žádná data ke smazání!");
+  	return;
+  	}
+  }
+</script>
+
+<h3>Návrh nových názvů skinů:</h3>
+<table id="table1" border="" align="center" cellspacing="0" width="50%" >
+<tbody>
+<tr>
+<td> <b>Nickname</b></td>
+<td> <b>Název skinu</b></td>
+</tr>
+<tr>
+<td> Lojza Kadrnoška</td>
+<td> Torque</td>
+</tbody>
+</table>
+<p align="center">
+<input id="ed1" type="text" placeholder="Zde vložte váš nickname"/>
+<input id="ed2" type="text" placeholder="Zde vložte nový návrh skinu"/>
+<button onclick=fce1()> Přidat návrh </button>
+<button onclick=fce2()> Vymazat poslední návrh</button>
+
+</div>
+
+<div id='id_zahlavi'> <h3>© 193241 - Pospíšil Václav</h3></div>
+
+</body>
+</html>
